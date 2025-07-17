@@ -1,31 +1,43 @@
 <script setup>
-const users = ref(null)
+const data = ref(null)
+const type = ref('users')
 
-async function fetchUsers() {
-  const res = await fetch('/api/users')
-  // const res = await fetch('https://mockly.atlaxt.me/api/users')
-  users.value = await res.json()
+async function fetchData(selectedType = type.value) {
+  type.value = selectedType
+  const res = await fetch(`/api/${type.value}`)
+  data.value = await res.json()
 }
+onMounted(() => fetchData('users'))
 </script>
 
 <template>
   <NuxtLayout>
     <UCard variant="subtle" :ui="{ body: 'h-full' }">
       <template #header>
-        <div class="flex md:flex-row flex-col gap-2 justify-between md:items-center items-start">
-          <label>
-            {{ "https://mockly.atlaxt.me/api/users" }}
-          </label>
-          <UButton icon="lucide:user" label="Kullanıcıları Getir" @click="fetchUsers" />
+        <div class="flex flex-col md:flex-row gap-2 justify-between md:items-center items-start w-full">
+          <div class="flex items-center gap-2">
+            <UButton
+              icon="lucide:user"
+              label="Kullanıcılar"
+              :variant="type === 'users' ? 'solid' : 'ghost'"
+              @click="fetchData('users')"
+            />
+            <UButton
+              icon="lucide:list-todo"
+              label="Todos"
+              :variant="type === 'todos' ? 'solid' : 'ghost'"
+              @click="fetchData('todos')"
+            />
+          </div>
         </div>
       </template>
       <div class="overflow-y-auto h-full pb-12">
-        <div v-if="users" style="margin-top: 16px;">
-          <pre>{{ users }}</pre>
+        <div v-if="data" style="margin-top: 16px;">
+          <pre>{{ data }}</pre>
         </div>
       </div>
       <template #footer>
-        asd
+        <span class="text-xs text-gray-400">mockly.atlaxt.me API demo</span>
       </template>
     </UCard>
   </NuxtLayout>
