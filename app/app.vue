@@ -3,6 +3,7 @@ const users = ref(null)
 
 async function fetchUsers() {
   const res = await fetch('/api/users')
+  // const res = await fetch('https://mockly.atlaxt.me/api/users')
   users.value = await res.json()
 }
 </script>
