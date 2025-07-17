@@ -8,6 +8,10 @@ async function fetchData(selectedType = type.value) {
   data.value = await res.json()
 }
 onMounted(() => fetchData('users'))
+
+useHead({
+  title: 'Mockly',
+})
 </script>
 
 <template>
