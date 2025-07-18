@@ -41,24 +41,44 @@ useHead({
         <div class="flex flex-col md:flex-row gap-2 justify-between md:items-center items-start w-full">
           <div class="flex items-center gap-2">
             <UButton
+              color="neutral"
               icon="lucide:user"
               label="Kullanıcılar"
               :variant="type === 'users' ? 'solid' : 'ghost'"
               @click="fetchData('users')"
             />
             <UButton
+              color="neutral"
               icon="lucide:list-todo"
               label="Todos"
               :variant="type === 'todos' ? 'solid' : 'ghost'"
               @click="fetchData('todos')"
             />
             <UButton
+              color="neutral"
               icon="lucide:key"
               label="UUID"
               :variant="type === 'uuid' ? 'solid' : 'ghost'"
               @click="fetchData('uuid')"
             />
           </div>
+          <UPopover :content="{ side: 'left', align: 'start' }">
+            <UButton color="neutral" icon="lucide:info" variant="subtle" />
+
+            <template #content>
+              <div class="text-xs p-4 leading-relaxed max-w-xs">
+                <b>/api/users</b> <br> 10 adet sahte kullanıcıyı JSON olarak döndürür.<br>
+                <b>/api/users/1</b> <br> Belirli bir kullanıcıyı ID ile getirir.<br><br>
+                <b>/api/todos</b> <br> Örnek yapılacaklar (todo) listesini döndürür.<br>
+                <b>/api/todos/1</b> <br> Belirli bir todo’yu ID ile getirir.<br><br>
+                <b>/api/uuid</b> <br> Rastgele UUID üretir. <br>
+                <span class="text-gray-500 ml-2">Varsayılan: v4<br>
+                  <b>?v=1</b> → UUID v1 <br>
+                  <b>?v=5&amp;name=example</b> → UUID v5 (isimle birlikte)<br>
+                </span>
+              </div>
+            </template>
+          </UPopover>
         </div>
       </template>
       <div class="overflow-y-auto h-full pb-12">
@@ -69,18 +89,7 @@ useHead({
         <!-- uuid gösterimi -->
         <div v-else-if="type === 'uuid'" class="flex flex-col gap-4 mt-4 max-w-lg">
           <div class="flex items-center gap-4">
-            <label class="text-sm font-medium">Version:</label>
-            <select v-model="uuidVersion" class="border rounded px-2 py-1 text-sm">
-              <option value="1">
-                v1
-              </option>
-              <option value="4">
-                v4
-              </option>
-              <option value="5">
-                v5
-              </option>
-            </select>
+            <USelectMenu v-model="uuidVersion" value-key="id" class="w-24" :search-input="false" :items="[{ label: 'v1', id: '1' }, { label: 'v4', id: '4' }, { label: 'v5', id: '5' }]" />
             <input
               v-if="uuidVersion === '5'"
               v-model="uuidName"
@@ -88,7 +97,7 @@ useHead({
               class="border rounded px-2 py-1 text-sm"
               style="min-width: 180px;"
             >
-            <UButton label="Get UUID" icon="lucide:refresh-cw" size="xs" @click="fetchUuid" />
+            <UButton color="neutral" label="Get UUID" icon="lucide:refresh-cw" size="xs" @click="fetchUuid" />
           </div>
           <div v-if="uuidData" style="margin-top: 16px;">
             <pre>{{ uuidData }}</pre>
