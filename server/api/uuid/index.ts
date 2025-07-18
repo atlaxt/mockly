@@ -7,6 +7,8 @@ const NAMESPACE = 'b44d86a0-0227-47da-b0b5-2a4f13c36d4a'
 type UuidResponse = UuidV1 | UuidV4 | UuidV5 | { error: string }
 
 export default defineEventHandler<UuidResponse>((event) => {
+  setHeader(event, 'Access-Control-Allow-Origin', '*')
+
   const v = getQuery(event).v ?? '4'
 
   if (v === '1') {
