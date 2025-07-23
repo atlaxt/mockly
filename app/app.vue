@@ -1,4 +1,13 @@
-<script setup>
+<script setup lang="ts">
+</script>
+
+<template>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+</template>
+
+<!-- <script setup>
 import { onMounted, ref } from 'vue'
 
 const data = ref(null)
@@ -82,11 +91,9 @@ useHead({
         </div>
       </template>
       <div class="overflow-y-auto h-full pb-12">
-        <!-- users / todos gösterimi -->
         <div v-if="type !== 'uuid' && data" style="margin-top: 16px;">
           <pre>{{ data }}</pre>
         </div>
-        <!-- uuid gösterimi -->
         <div v-else-if="type === 'uuid'" class="flex flex-col gap-4 mt-4 max-w-lg">
           <div class="flex items-center gap-4">
             <USelectMenu v-model="uuidVersion" value-key="id" class="w-24" :search-input="false" :items="[{ label: 'v1', id: '1' }, { label: 'v4', id: '4' }, { label: 'v5', id: '5' }]" />
@@ -110,9 +117,9 @@ useHead({
     </UCard>
   </NuxtLayout>
 </template>
-
+-->
 <style>
 div {
-  font-family: Inter, sans-serif;
+  font-family: Bitcount Prop Single, sans-serif;
 }
 </style>
