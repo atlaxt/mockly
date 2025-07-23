@@ -2,9 +2,7 @@
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <NuxtPage />
 </template>
 
 <!-- <script setup>
@@ -118,8 +116,3 @@ useHead({
   </NuxtLayout>
 </template>
 -->
-<style>
-div {
-  font-family: Bitcount Prop Single, sans-serif;
-}
-</style>

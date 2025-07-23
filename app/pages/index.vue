@@ -5,7 +5,9 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="flex flex-col">
-    <app-welcome />
-  </div>
+  <nuxt-layout>
+    <div class="flex flex-col">
+      <app-welcome />
+    </div>
+  </nuxt-layout>
 </template>

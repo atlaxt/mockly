@@ -6,9 +6,6 @@ const items = computed<NavigationMenuItem[][]>(() => [
     {
       label: 'MOCKLY',
       class: 'text-3xl font-bold font-stretch-ultra-condensed',
-      // activeClass: '',
-      // slot: 'logo' as const,
-      // class: 'flex justify-center items-center',
     },
   ],
   [
@@ -16,11 +13,13 @@ const items = computed<NavigationMenuItem[][]>(() => [
       label: 'Docs',
       icon: 'i-lucide-book-open',
       to: '/docs',
+      disabled: true,
     },
     {
       label: 'About',
       icon: 'i-lucide-lightbulb',
       to: '/docs',
+      disabled: true,
     },
     {
       icon: 'i-simple-icons-github',

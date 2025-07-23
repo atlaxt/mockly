@@ -1,2 +1,10 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+
+div {
+  font-family: Inter, sans-serif;
+}
+
+.mockly-font {
+  font-family: Bitcount Prop Single, sans-serif;
+}
