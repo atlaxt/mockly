@@ -15,18 +15,19 @@
   },
   {
     "id": 2,
-    "name": "Ayşe Demir",
-    "email": "ayse@example.com",
-    "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
-    "role": "editor",
-    "registeredAt": "2024-01-08T08:22:00Z",
-    "phone": "+90 555 222 22 22",
+    "name": "Kübra Çetinkaya",
+    "email": "kubra@example.com",
+    "avatar": "https://github.com/kubracetinkaya1.png",
+    "role": "admin",
+    "registeredAt": "2022-03-15T00:32:00Z",
+    "phone": "+90 544 999 88 88",
     "active": true,
     "address": {
-      "city": "Ankara",
+      "city": "Bursa",
       "country": "Türkiye"
     }
   },
+
   {
     "id": 3,
     "name": "Mehmet Kaya",
