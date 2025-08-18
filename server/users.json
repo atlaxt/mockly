@@ -30,15 +30,15 @@
 
   {
     "id": 3,
-    "name": "Mehmet Kaya",
-    "email": "mehmet@example.com",
-    "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
-    "role": "user",
-    "registeredAt": "2022-07-21T14:11:00Z",
-    "phone": "+90 555 333 33 33",
-    "active": false,
+    "name": "Göktuğ İlker",
+    "email": "goktug@example.com",
+    "avatar": "https://github.com/Goktugilker.png",
+    "role": "admin",
+    "registeredAt": "2022-03-15T00:32:00Z",
+    "phone": "+90 544 999 88 88",
+    "active": true,
     "address": {
-      "city": "İzmir",
+      "city": "Bursa",
       "country": "Türkiye"
     }
   },
