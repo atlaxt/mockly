@@ -13,11 +13,11 @@
       "country": "Türkiye"
     }
   },
-  {
+   {
     "id": 2,
-    "name": "Kübra Çetinkaya",
-    "email": "kubra@example.com",
-    "avatar": "https://github.com/kubracetinkaya1.png",
+    "name": "Göktuğ İlker",
+    "email": "goktug@example.com",
+    "avatar": "https://github.com/Goktugilker",
     "role": "admin",
     "registeredAt": "2022-03-15T00:32:00Z",
     "phone": "+90 544 999 88 88",
@@ -27,18 +27,17 @@
       "country": "Türkiye"
     }
   },
-
   {
     "id": 3,
-    "name": "Mehmet Kaya",
-    "email": "mehmet@example.com",
-    "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
-    "role": "user",
-    "registeredAt": "2022-07-21T14:11:00Z",
-    "phone": "+90 555 333 33 33",
-    "active": false,
+    "name": "Kübra Çetinkaya",
+    "email": "kubra@example.com",
+    "avatar": "https://github.com/kubracetinkaya1.png",
+    "role": "admin",
+    "registeredAt": "2022-03-15T00:32:00Z",
+    "phone": "+90 544 999 88 88",
+    "active": true,
     "address": {
-      "city": "İzmir",
+      "city": "Bursa",
       "country": "Türkiye"
     }
   },
