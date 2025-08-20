@@ -44,15 +44,15 @@
   },
   {
     "id": 4,
-    "name": "Fatma Şahin",
-    "email": "fatma@example.com",
-    "avatar": "https://randomuser.me/api/portraits/women/4.jpg",
-    "role": "user",
-    "registeredAt": "2021-09-10T09:40:00Z",
+    "name": "Seymen Kalkan",
+    "email": "seymenkalkan@gmail.com",
+    "avatar": "https://github.com/xaprier.png",
+    "role": "admin",
+    "registeredAt": "2025-08-20T00:00:00Z",
     "phone": "+90 555 444 44 44",
     "active": true,
     "address": {
-      "city": "Bursa",
+      "city": "Erzurum",
       "country": "Türkiye"
     }
   },
